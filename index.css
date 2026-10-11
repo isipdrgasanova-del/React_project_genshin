@@ -1,0 +1,100 @@
+:root {
+  --bg: #eef7fb;
+  --card: #d4e9f7;
+  --input-bg: #f5fbff;
+  --accent: #4a90d9;
+  --accent-hover: #3574b5;
+  --danger: #e05a7a;
+  --text: #1e3a5f;
+  --text-secondary: #5a7d9a;
+  --border: #a8cee0;
+  --header-gradient: linear-gradient(to right, #d4e9f7 0%, #eaf5fc 60%, #d4e9f7 100%);
+  --shadow: rgba(74, 144, 217, 0.15);
+}
+
+[data-theme="dark"] {
+  --bg: #0d1b2a;
+  --card: #1b2f42;
+  --input-bg: #253d51;
+  --accent: #4a9edd;
+  --accent-hover: #5fb3f0;
+  --danger: #c4456a;
+  --text: #e8f1f9;
+  --text-secondary: #7d9b7a;
+  --border: #2d4a5f;
+  --header-gradient: linear-gradient(to right, #1b2f42 0%, #1e3a52 60%, #1b2f42 100%);
+  --shadow: rgba(74, 158, 221, 0.25);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a { text-decoration: none; }
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+button:hover:not(:disabled) { opacity: 0.92; }
+button:disabled { opacity: 0.55; cursor: not-allowed; }
+
+input, textarea, select {
+  font-family: inherit;
+  outline: none;
+  border-radius: 10px;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px var(--shadow);
+}
+
+.card { background: var(--card); border-radius: 12px; padding: 20px; color: var(--text); }
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--input-bg);
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn:hover:not(:disabled) { background: var(--accent-hover); }
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.page-title { color: var(--accent); text-align: center; }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
